@@ -84,4 +84,3 @@ For any inquiries or feedback, please contact me at [temesgengebreab33@example.c
 ---
 
 Thank you for checking out my portfolio website! I hope you find it useful and inspiring.
-```

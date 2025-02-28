@@ -1,0 +1,11 @@
+Model Information:
+* title:	Large Speaker Man Body
+* source:	https://sketchfab.com/3d-models/large-speaker-man-body-c1dd1816a7e04e7eafdf5797c5f650af
+* author:	Socal (https://sketchfab.com/Dababytoxd)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Large Speaker Man Body" (https://sketchfab.com/3d-models/large-speaker-man-body-c1dd1816a7e04e7eafdf5797c5f650af) by Socal (https://sketchfab.com/Dababytoxd) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

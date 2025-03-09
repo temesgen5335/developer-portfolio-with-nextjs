@@ -1,63 +1,58 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { TypeAnimation } from "react-type-animation";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import AviProfile from "./AviProfile"; 
+import AviProfile from "./AviProfile";
 
 const HeroSection = () => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    // Initialize Three.js scene here
-    if (typeof window !== "undefined" && containerRef.current) {
-      import("./three").then((module) => {
-        module.initializeScene(containerRef.current);
-      });
-    }
-  }, []);
-
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-12 flex flex-col sm:flex-row items-center justify-center"
-        >
-          <div className="sm:w-1/2 text-center sm:text-left">
-            <h2 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-                Building Intelligent Systems for a Smarter Future
+    <section className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center lg:text-left order-2 lg:order-1"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#4b50b3] to-[#6f74d3]">
+                Building AI-Driven Systems
               </span>
-              <br></br>
-            </h2>
-            <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptuous.
+              <br />
+              <span className="text-white">for a Smarter Future</span>
+            </h1>
+            <p className="text-[#ADB7BE] text-lg sm:text-xl mb-8 max-w-2xl mx-auto lg:mx-0">
+              Turning ideas into intelligent solutions—building scalable AI systems 
+              that empower innovation and enhance user experiences.
             </p>
-            <div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link
                 href="/#contact"
-                className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
+                className="px-6 py-3 rounded-full bg-[#4b50b3] hover:bg-[#5c61c7] text-white font-medium transition-all duration-300 text-center"
               >
-                Let's connect
+                Let&apos;s connect
               </Link>
               <Link
                 href="/"
-                className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
+                className="px-6 py-3 rounded-full border-2 border-[#4b50b3] text-white hover:bg-[#4b50b3] transition-all duration-300 text-center"
               >
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                  Download CV
-                </span>
+                Download CV
               </Link>
             </div>
-          </div>
-          <div className="sm:w-1/2">
-            <AviProfile /> 
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* Profile Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="order-1 lg:order-2"
+          >
+            <AviProfile />
+          </motion.div>
+        </div>
       </div>
     </section>
   );

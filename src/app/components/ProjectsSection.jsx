@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Ethiopian Startup Community platform",
-    description: "Project 1 description",
+    description: "A unified and thriving Ethiopian startup community platform, where entrepreneurs, investors, government bodies, and other ecosystem builders and support organizations collaborate to accelerate startup growth and innovation. Built an inclusive, accessible, and sustainable digital platform that connects and supports all stakeholders of the startup ecosystem—entrepreneurs, investors, accelerators, incubators, training providers, and government agencies—in fostering the growth and development of startups in Ethiopia.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Fetir Ecommerece Website",
-    description: "Project 2 description",
+    description: "This project aims to empower creative artists and craftsmen by providing a platform to showcase, sell, and gain recognition for their unique and innovative creations",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -80,11 +80,13 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <section id="projects" className="px-4 py-16 max-w-7xl mx-auto">
+      <h2 className="text-center text-4xl font-bold text-white mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      
+      {/* Tags */}
+      <div className="flex flex-wrap justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -101,7 +103,9 @@ const ProjectsSection = () => {
           isSelected={tag === "AI/ML"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+
+      {/* Projects Grid */}
+      <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -109,6 +113,7 @@ const ProjectsSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.4 }}
+            className="h-full"
           >
             <ProjectCard
               key={project.id}

@@ -265,7 +265,7 @@ const AboutSection = () => {
           <div>
             <h2 className="text-4xl font-bold mb-4 text-[#7f5af0]">About Me</h2>
             <p className="text-lg text-[#ADB7BE] leading-relaxed">
-              I'm a full-stack developer and AI engineer with a passion for creating smart, scalable, and accessible digital solutions. My work blends advanced machine learning techniques with clean, modern frontend experiences. I enjoy building tools that not only solve problems but also delight users.
+              I&apos;m a full-stack developer and AI engineer with a passion for creating smart, scalable, and accessible digital solutions. My work blends advanced machine learning techniques with clean, modern frontend experiences. I enjoy building tools that not only solve problems but also delight users.
             </p>
           </div>
         </motion.div>

@@ -43,7 +43,7 @@ const EmailSection = () => {
             Let&apos;s Connect
           </h2>
           <p className="text-[#ADB7BE] mb-6 max-w-md leading-relaxed">
-            I'm open to new opportunities that involve building smart, scalable
+            I&apos;m open to new opportunities that involve building smart, scalable
             systems and solving meaningful problems. Feel free to reach out, 
             I&apos;ll do my best to respond promptly.
           </p>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 
 const projects = [
     {
@@ -148,7 +149,7 @@ export default function Projects() {
                 {Array.isArray(project.images) && project.images.length > 0 ? (
                 <div className="overflow-x-auto flex py-4 gap-4">
                     {project.images.map((src, i) => (
-                    <img
+                    <Image
                         key={i}
                         src={src}
                         alt={`${project.title} screenshot ${i + 1}`}

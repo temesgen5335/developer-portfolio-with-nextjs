@@ -2,6 +2,7 @@ import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
@@ -13,7 +14,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div
         className="h-48 sm:h-64 w-full relative"
       >
-        <img
+        <Image
           src={imgUrl}
           alt={title}
           className="w-full h-full object-cover"

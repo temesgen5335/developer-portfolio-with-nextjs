@@ -1,19 +1,19 @@
 "use client";
 
-import { createContext, useState, ReactNode, useEffect, useMemo } from "react";
+import { createContext, useState, useEffect, useMemo } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import { lightTheme, darkTheme } from "./theme";
 
+// Context with default values
 export const ThemeContext = createContext({
   toggleTheme: () => {},
   isDarkMode: false,
 });
 
-export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
+export const ThemeContextProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Load saved theme from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {

@@ -11,16 +11,16 @@ const EmailSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
+
     try {
-      const response = await fetch("https://formspree.io/f/your-form-id", {
+      const response = await fetch("https://formspree.io/f/mqadaepr", {
         method: "POST",
         body: formData,
         headers: {
           Accept: "application/json",
         },
       });
-      
+
       if (response.ok) {
         setEmailSubmitted(true);
       } else {
@@ -34,92 +34,116 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="w-full py-24 px-6 md:px-24 bg-[#0D0F1A] text-white"
     >
-      {/* <div className="hidden md:block bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-yellow-800 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-2/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
-      <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
-        </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
-        </p>
-        <div className="socials flex flex-row gap-2">
-          <a href="https://github.com/temesgen5335" target="_blank">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </a>
-          <a href="https://linkedin.com/in/temesgen-gebreabzgi" target="_blank">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </a>
-        </div>
-      </div>
-      <div>
-        {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
-            Email sent successfully!
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Left - Message & Socials */}
+        <div>
+          <h2 className="text-3xl font-bold mb-4 text-[#7f5af0]">
+            Let&apos;s Connect
+          </h2>
+          <p className="text-[#ADB7BE] mb-6 max-w-md leading-relaxed">
+            I'm open to new opportunities that involve building smart, scalable
+            systems and solving meaningful problems. Feel free to reach out, 
+            I&apos;ll do my best to respond promptly.
           </p>
-        ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
-              >
-                Your email
-              </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Subject
-              </label>
-              <input
-                name="subject"
-                type="text"
-                id="subject"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Just saying hi"
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="Let's talk about..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="bg-primary-900 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+
+          <div className="flex space-x-4">
+            <a
+              href="https://github.com/temesgen5335"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
             >
-              Send Message
-            </button>
-          </form>
-        )}
+              <Image src={GithubIcon} alt="GitHub icon" width={32} height={32} />
+            </a>
+            <a
+              href="https://linkedin.com/in/temesgen-gebreabzgi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+            >
+              <Image src={LinkedinIcon} alt="LinkedIn icon" width={32} height={32} />
+            </a>
+          </div>
+        </div>
+
+        {/* Right - Contact Form */}
+        <div className="bg-[#161B22] p-6 rounded-xl shadow-lg">
+          {emailSubmitted ? (
+            <p className="text-green-500 text-sm">
+              ✅ Email sent successfully. I’ll get back to you soon!
+            </p>
+          ) : (
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Email Field */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Your email
+                </label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="you@example.com"
+                  className="w-full px-4 py-2 bg-[#0F111A] border border-[#2A2D3A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#7f5af0]"
+                />
+              </div>
+
+              {/* Subject Field */}
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Subject
+                </label>
+                <input
+                  name="subject"
+                  type="text"
+                  id="subject"
+                  required
+                  placeholder="Let's collaborate"
+                  className="w-full px-4 py-2 bg-[#0F111A] border border-[#2A2D3A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#7f5af0]"
+                />
+              </div>
+
+              {/* Message Field */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-1"
+                >
+                  Message
+                </label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder="Tell me what’s on your mind..."
+                  className="w-full px-4 py-2 bg-[#0F111A] border border-[#2A2D3A] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#7f5af0]"
+                ></textarea>
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-[#7f5af0] hover:bg-[#5c3dd0] text-white font-medium py-2.5 px-4 rounded-lg transition duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
 export default EmailSection;
+

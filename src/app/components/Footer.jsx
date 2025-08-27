@@ -19,7 +19,7 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer border-t border-[#33353F] text-white bg-[#121212] py-8">
+    <footer className="footer border-t border-[#33353F] text-white bg-[#0D0F1A] py-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
           <Link href={"/"} className="text-xl md:text-3xl text-neonCy font-semibold">

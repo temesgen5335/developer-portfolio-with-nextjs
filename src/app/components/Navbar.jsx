@@ -9,15 +9,15 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "/",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/contact",
   },
 ];
 
@@ -38,7 +38,7 @@ const Navbar = () => {
     <motion.nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-[#121212]/80 backdrop-blur-md border-b border-[#33353F]" 
+          ? "bg-[#121212]/80 backdrop-blur-md" 
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}

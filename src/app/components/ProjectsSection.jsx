@@ -12,7 +12,7 @@ const projectsData = [
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/projects",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/projects",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projectsData = [
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/projects",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const projectsData = [
     image: "/images/projects/5.png",
     tag: ["All", "AI/ML"],
     gitUrl: "https://github.com/temesgen5335/data-warehouse-for-llm-finetuning.git",
-    previewUrl: "/",
+    previewUrl: "/projects",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const projectsData = [
     image: "/images/projects/6.jpg",
     tag: ["All", "AI/ML"],
     gitUrl: "https://github.com/temesgen5335/Automated-Storyboard-Synthesis-for-Digital-Advertising.git",
-    previewUrl: "/",
+    previewUrl: "/projects",
   },
 ];
 
